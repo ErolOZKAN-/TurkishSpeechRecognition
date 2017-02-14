@@ -1,0 +1,591 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="REFRESH" content="60">
+<title>turkish</title>
+<style type="text/css">
+body {
+ background: #f0f0f5;
+}
+p,span {
+ font-family: monospace;
+}
+p {
+ margin-right: 6em;
+}
+p.phase {
+ font-weight: bold;
+ margin-bottom: 0;
+}
+p.result, p.WARNING, p.error {
+ margin-top: 0;
+ margin-bottom: 0;
+ margin-left: 5em;
+}
+span.status {
+ float: right;
+ margin-top: -1em;
+}
+.passed, .completed {
+ color: #00D000;
+}
+.WARNING, .warning {
+ color: #555500;
+}
+.FAILED, .error {
+ color: #DD0000;
+}
+</style>
+</head>
+<body>
+<h1 class="experiment">/home/erol/Desktop/cmusphinx-code-13119-trunk/turkish</h1>
+<h2 class="hostname">Training turkish on ubuntu</h2>
+<hr>
+<h3>MODULE: 000 Computing feature from audio files	(2015-12-13 07:37)</h3>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/000.comp_feat/turkish.train-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='audio files'>Extracting features from  segments starting at  (part 1 of 1) </p>
+<p class='result'>sphinx_fe <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/000.comp_feat/turkish.test-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p>Feature extraction is done</p>
+<hr>
+<h3>MODULE: 00 verify training files	(2015-12-13 07:37)</h3>
+<p class='phase'>Phase 1: Checking to see if the dict and filler dict agrees with the phonelist file.</p>
+<p class='result'>Found 8978 words using 29 phones</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 2: Checking to make sure there are not duplicate entries in the dictionary</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 3: Check general format for the fileids file; utterance length (must be positive); files exist</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 4: Checking number of lines in the transcript file should match lines in fileids file</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 5: Determine amount of training data, see if n_tied_states seems reasonable.</p>
+<p class='result'>Estimated Total Hours Training: 0.936275</p>
+<p class='result'>This is a small amount of data, no comment at this time</p>
+<span class='status WARNING'>WARNING</span>
+<p class='phase'>Phase 6: Checking that all the words in the transcript are in the dictionary</p>
+<p class='result'>Words in dictionary: 8975</p>
+<p class='result'>Words in filler dictionary: 3</p>
+<span class='status passed'>passed</span>
+<p class='phase'>Phase 7: Checking that all the phones in the transcript are in the phonelist, and all phones in the phonelist appear at least once</p>
+<span class='status passed'>passed</span>
+<hr>
+<h3>MODULE: 0000 train grapheme-to-phoneme model	(2015-12-13 07:37)</h3>
+<p>Skipped (set $CFG_G2P_MODEL = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 01 Train LDA transformation	(2015-12-13 07:37)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 02 Train MLLT transformation	(2015-12-13 07:37)</h3>
+<p>Skipped (set $CFG_LDA_MLLT = 'yes' to enable)</p>
+<hr>
+<h3>MODULE: 05 Vector Quantization	(2015-12-13 07:37)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: 10 Training Context Independent models for forced alignment and VTLN	(2015-12-13 07:37)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 11 Force-aligning transcripts	(2015-12-13 07:37)</h3>
+<p>Skipped:  $ST::CFG_FORCEDALIGN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 12 Force-aligning data for VTLN	(2015-12-13 07:37)</h3>
+<p>Skipped:  $ST::CFG_VTLN set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 20 Training Context Independent models	(2015-12-13 07:37)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...</span>
+<span class='progress'>models...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Flat initialize</p>
+<p class='result'>mk_mdef_gen <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.make_ci_mdef_fromphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>mk_flat <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.makeflat_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.initmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.normmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_gau <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.initvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.normvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.cpmean_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>cp_parm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.cpvar_cihmm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.1-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -158.889185572852</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.2-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -158.377672751655</p>
+<p class='result'>Convergence Ratio = 0.511512821197243</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.3-1.bw.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -155.505593976129</p>
+<p class='result'>Convergence Ratio = 2.87207877552621</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.4-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 2 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -154.473179507885</p>
+<p class='result'>Convergence Ratio = 1.03241446824376</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.5-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -154.169950255853</p>
+<p class='result'>Convergence Ratio = 0.30322925203248</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.6-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/20.ci_hmm/turkish.1.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -154.092837912529</p>
+<p class='result'>Training completed after 6 iterations</p>
+<hr>
+<h3>MODULE: 30 Training Context Dependent models	(2015-12-13 07:37)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Initialization</p>
+<p class='result'>mk_mdef_gen <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.make_alltriphonelist.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>init_mixw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.copycitocd.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for iteration: 1 (1 of 1) </p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.1-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -154.0635084779</p>
+<p class='result'>Baum welch starting for iteration: 2 (1 of 1) </p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.2-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.659665638502</p>
+<p class='result'>Convergence Ratio = 4.40384283939792</p>
+<p class='result'>Baum welch starting for iteration: 3 (1 of 1) </p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.3-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -147.35835992892</p>
+<p class='result'>Convergence Ratio = 2.30130570958204</p>
+<p class='result'>Baum welch starting for iteration: 4 (1 of 1) </p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.4-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -146.713439240228</p>
+<p class='result'>Convergence Ratio = 0.644920688692025</p>
+<p class='result'>Baum welch starting for iteration: 5 (1 of 1) </p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.5-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -146.602926406</p>
+<p class='result'>Convergence Ratio = 0.110512834227819</p>
+<p class='result'>Baum welch starting for iteration: 6 (1 of 1) </p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.6-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/30.cd_hmm_untied/turkish.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -146.573745550068</p>
+<p class='result'>Training completed after 6 iterations</p>
+<hr>
+<h3>MODULE: 40 Build Trees	(2015-12-13 07:38)</h3>
+<p class='phase'>Phase 1: Cleaning up old log files...</p>
+<p class='phase'>Phase 2: Make Questions</p>
+<p class='result'>make_quests <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.make_questions.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Tree building</p>
+<p class='result'>Processing each phone with each state</p>
+<p class='result'>a 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.a.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>a 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.a.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>a 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.a.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>b 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.b.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>b 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.b.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>b 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.b.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>c 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.c.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>c 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.c.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>c 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.c.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>d 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.d.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>d 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.d.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>d 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.d.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>e 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.e.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>e 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.e.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>e 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.e.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>f 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.f.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>f 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.f.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>f 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.f.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>g 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.g.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>g 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.g.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>g 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.g.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>gg 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.gg.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>gg 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.gg.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>gg 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.gg.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>h 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.h.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>h 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.h.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>h 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.h.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Skipping SIL</p>
+<p class='result'>ii 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.ii.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>ii 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.ii.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>ii 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.ii.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>i 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.i.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>i 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.i.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>i 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.i.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>j 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.j.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>j 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.j.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>j 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.j.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>k 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.k.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>k 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.k.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>k 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.k.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>l 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.l.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>l 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.l.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>l 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.l.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>m 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.m.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>m 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.m.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>m 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.m.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>n 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.n.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>n 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.n.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>n 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.n.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>o 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.o.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>o 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.o.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>o 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.o.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>oo 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.oo.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>oo 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.oo.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>oo 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.oo.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>p 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.p.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>p 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.p.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>p 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.p.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>r 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.r.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>r 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.r.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>r 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.r.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>s 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.s.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>s 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.s.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>s 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.s.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>iss 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.iss.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>iss 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.iss.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>iss 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.iss.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>t 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.t.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>t 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.t.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>t 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.t.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>u 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.u.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>u 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.u.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>u 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.u.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>uu 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.uu.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>uu 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.uu.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>uu 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.uu.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>v 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.v.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>v 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.v.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>v 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.v.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>y 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.y.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>y 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.y.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>y 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.y.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>z 0 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.z.0.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>z 1 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.z.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>z 2 </p>
+<p class='result'>bldtree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/40.buildtrees/turkish.buildtree.z.2.log">Log File</a></p><span class='status completed'>completed</span>
+<hr>
+<h3>MODULE: 45 Prune Trees	(2015-12-13 07:39)</h3>
+<p class='result'>mk_mdef_gen <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/45.prunetree/turkish.build.alltriphones.mdef.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 1: Tree Pruning</p>
+<p class='result'>prunetree <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/45.prunetree/turkish.prunetree.200.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 2: State Tying</p>
+<p class='result'>tiestate <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/45.prunetree/turkish.tiestate.200.log">Log File</a></p><span class='status completed'>completed</span>
+<hr>
+<h3>MODULE: 50 Training Context dependent models	(2015-12-13 07:39)</h3>
+<p class='phase'>Phase 1: Cleaning up directories:</p>
+<span class='progress'>	accumulator...</span>
+<span class='progress'>logs...</span>
+<span class='progress'>qmanager...
+</span>
+<span class='status completed'>completed</span>
+<p class='phase'>Phase 2: Copy CI to CD initialize</p>
+<p class='result'>init_mixw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.copy.ci.2.cd.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='phase'>Phase 3: Forward-Backward</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.1.1-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.1.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -154.0635084779</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.1.2-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.1.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -153.231527210702</p>
+<p class='result'>Convergence Ratio = 0.831981267197591</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.1.3-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 6 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.1.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -153.079785920622</p>
+<p class='result'>Convergence Ratio = 0.151741290080366</p>
+<p class='result'>Baum welch starting for 1 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.1.4-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 6 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.1.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -153.023142349697</p>
+<p class='result'>Split Gaussians, increase by 1</p>
+<p class='result'>inc_comp <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.split_gaussians.1.1.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -153.023142349697</p>
+<p class='result'>Convergence Ratio = 0.0566435709252744</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.1-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 6 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -153.354465589923</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.2-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 6 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -152.845536195063</p>
+<p class='result'>Convergence Ratio = 0.508929394859678</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.3-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -152.435680282418</p>
+<p class='result'>Convergence Ratio = 0.409855912644616</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.4-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -151.960822769388</p>
+<p class='result'>Convergence Ratio = 0.474857513029946</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.5-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -151.75275316324</p>
+<p class='result'>Convergence Ratio = 0.208069606147546</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.6-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -151.647054278769</p>
+<p class='result'>Convergence Ratio = 0.105698884470684</p>
+<p class='result'>Baum welch starting for 2 Gaussian(s), iteration: 7 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.7-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 6 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 7</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.2.7.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -151.581617019251</p>
+<p class='result'>Split Gaussians, increase by 2</p>
+<p class='result'>inc_comp <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.split_gaussians.2.2.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -151.581617019251</p>
+<p class='result'>Convergence Ratio = 0.0654372595179211</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.1-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 6 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -151.904699571901</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.2-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -151.414974355317</p>
+<p class='result'>Convergence Ratio = 0.489725216583963</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.3-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -151.17371226844</p>
+<p class='result'>Convergence Ratio = 0.241262086876901</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.4-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.928616851201</p>
+<p class='result'>Convergence Ratio = 0.245095417238588</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.5-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.769102762969</p>
+<p class='result'>Convergence Ratio = 0.159514088231589</p>
+<p class='result'>Baum welch starting for 4 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.6-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.4.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.675022732541</p>
+<p class='result'>Split Gaussians, increase by 4</p>
+<p class='result'>inc_comp <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.split_gaussians.4.4.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.675022732541</p>
+<p class='result'>Convergence Ratio = 0.0940800304284721</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 1 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.1-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 1</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.1.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.979222755124</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 2 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.2-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 2</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.2.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.44442859605</p>
+<p class='result'>Convergence Ratio = 0.534794159073812</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 3 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.3-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 3</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.3.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -150.17401536898</p>
+<p class='result'>Convergence Ratio = 0.270413227069668</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 4 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.4-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 4</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.4.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.904434182609</p>
+<p class='result'>Convergence Ratio = 0.269581186370857</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 5 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.5-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 5</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.5.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.718978254022</p>
+<p class='result'>Convergence Ratio = 0.185455928586975</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 6 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.6-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 6</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.6.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.598272921235</p>
+<p class='result'>Convergence Ratio = 0.120705332786542</p>
+<p class='result'>Baum welch starting for 8 Gaussian(s), iteration: 7 (1 of 1)</p>
+<p class='result'>bw <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.7-1.bw.log">Log File</a></p><p class='error'>ERROR: This step had 4 ERROR messages and 0 WARNING messages.  Please check the log file for details.</p>
+<span class='status completed'>completed</span>
+<p class='result'>Normalization for iteration: 7</p>
+<p class='result'>norm <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/50.cd_hmm_tied/turkish.8.7.norm.log">Log File</a></p><span class='status completed'>completed</span>
+<p class='result'>Current Overall Likelihood Per Frame = -149.517980993813</p>
+<p>Training for 8 Gaussian(s) completed after 7 iterations</p>
+<hr>
+<h3>MODULE: 60 Lattice Generation	(2015-12-13 07:40)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 61 Lattice Pruning	(2015-12-13 07:40)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 62 Lattice Format Conversion	(2015-12-13 07:40)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 65 MMIE Training	(2015-12-13 07:40)</h3>
+<p>Skipped:  $ST::CFG_MMIE set to 'no' in sphinx_train.cfg</p>
+<hr>
+<h3>MODULE: 90 deleted interpolation	(2015-12-13 07:40)</h3>
+<p>Skipped for continuous models</p>
+<hr>
+<h3>MODULE: DECODE Decoding using models previously trained	(2015-12-13 07:40)</h3>
+<p class='result'>Decoding 1 segments starting at 0 (part 1 of 1) </p>
+<p class='result'>pocketsphinx_batch <a href="file:///home/erol/Desktop/cmusphinx-code-13119-trunk/turkish/logdir/decode/turkish-1-1.log">Log File</a></p><span class='status completed'>completed</span>
+<p>        Aligning results to find error rate</p>
+<p class='result'>SENTENCE ERROR: 100.0% (1/1)   WORD ERROR RATE: 60.0% (3/5)</p>
+<p class='result'>
